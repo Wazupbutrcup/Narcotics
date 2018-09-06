@@ -1,0 +1,30 @@
+name: Narcotics
+main: com.WazCodes.narcoticsPlugin.Narcotics
+version: 0.1
+api-version: 1.12, 1.12.1, 1.12.2, 1.13
+commands:
+  narcotics:
+    aliases: [drug, narc, narcotic]
+    description: Drug ideal for minecraft items
+    usage: "Incorrect Usage. '/narcotic [cleardrugs/reload]'"
+permissions:
+    drugs.*:
+        description: Gives access to all Narcotics features
+        children:
+            drugs.use: true
+            drugs.reload: true
+            drugs.cleardrugs: true
+            drugs.updates: true
+    drugs.updates:
+        description: Shows members who login when there's an update for Narcotics
+        default: op
+    drugs.use:
+        description: Allows users to do drugs
+        default: op    
+    drugs.reload:
+        description: Reloads the config
+        default: op    
+    drugs.cleardrugs:
+        description: Clears drugs from player
+        default: op
+  
